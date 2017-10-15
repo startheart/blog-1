@@ -6,5 +6,6 @@ require('babel-register')({
     return false
   }
 })
-
+debugger
+console.log(33)
 require('./app.js')
