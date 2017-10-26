@@ -4,7 +4,9 @@
     "debug": "node debug entry.js",
     "start:mongodb": "node prepare.js -n mongodb",
     "start:redis": "node prepare.js -n redis",
-    "supervisor": "supervisor --debug entry.js",
+    "restart:redis": "node restart.js -n redis",
+    "supervisor": "supervisor --debug-brk entry.js",
+    "inspect": "supervisor --inspect entry.js",
     "lint": "eslint --ext .js *.js */*.js",
     "test": "cross-env NODE_ENV=TEST node ./node_modules/mocha/bin/mocha --compilers js:babel-core/register --recursive"
   },
